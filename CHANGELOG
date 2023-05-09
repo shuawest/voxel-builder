@@ -1,0 +1,55 @@
+All notable changes to this project will be documented in this file,
+UIX improvement and code management is not included in this file.
+
+[4.0.1] (in progress)
+-
+
+[4.0.0]
+- NEW | update to Babylon.js 6
+- NEW | enter RC channel
+- NEW | PWA A2HS-ready
+- NEW | optional voxel or bake render
+
+[3.9.9]
+- NEW | symmetry pivot-center indicator
+- NEW | disable hover toolbox from preferences to use model/paint menu
+- NEW | optional startup project
+- NEW | optional height-gradient for  terrain generator
+- NEW | isolate voxels by color group
+- FIX | rework color groups + hide and seek (x3 faster)
+- FIX | memory records hide and seek
+- FIX | axis-view scene rotation conflict
+
+[3.9.8]
+- NEW | multiple permanent voxel storages
+- NEW | blender importer script for VBX files
+- FIX | speed up the SPS core (higher overall modeling performance)
+- FIX | speed up scene grid (center is always at world-center)
+- FIX | improved modeling tools and events
+- FIX | finish workplane (workplane reached the usability stage)
+- FIX | frame camera respect camera fov
+- FIX | LocalStorages() renamed to Snapshot() to prevent conflict
+- FIX | split model and bakery colorpickers (both ui and uix)
+- FIX | more intelligent user-interface
+
+[3.9.7]
+- NEW | python installer for desktop
+- NEW | .glb support for voxelizer (read docs)
+- NEW | optional pivot for symmetry, local center or world center
+- NEW | store background and light colors in VBX file
+- FIX | intelligent file drag-and-drop for jpg, png, svg
+- FIX | bakery shadows updated in real-time on transformation
+- FIX | orthographic camera respect fov
+- FIX | improve voxel rendering quality (render without bake)
+- FIX | remove grid from screenshot
+- BUG | workplane/boxtool bug at border 1,0,-1.5
+- BUG | remove ContactHardeningShadow (report of artifacts and possible performance issue)
+
+[3.9.6]
+- FIX | generator not clearing the bakes anymore (to bake multiple objects)
+- FIX | remove all the app-iframes, they slow things down
+
+[3.9.5]
+- NEW | Babylon.js library for long-term support
+
+[DISPOSED]
