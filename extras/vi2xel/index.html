@@ -260,9 +260,8 @@
         ctx.lineTo(w, h/2);
         ctx.moveTo(w/2, 0);
         ctx.lineTo(w/2, h);
-        ctx.lineWidth = 2;
+        ctx.lineWidth = 8;
         ctx.stroke();
-        ctx.lineWidth = 4;
         ctx.strokeRect(0, 0, w, h);
         return new THREE.CanvasTexture(c);
     }

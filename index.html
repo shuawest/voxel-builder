@@ -77,9 +77,9 @@
         body { background: white; font-family: 'DroidSans'; font-size: 11px; color: silver; position: fixed; width: 100%; height: 100%; cursor: default; }
         a { font-size: 11px; color: #6a8cad; text-decoration: none; }
         a:hover { color: orange; text-decoration: none; }
-        input[type=number] { width: 50px; height: 10px; text-indent: 2px; margin: 0 0 2px 0; background: var(--input-bg); color: var(--input-color); padding: 3px; font-size: 11px; border: solid 1px #343c49; border-radius: 2px; text-align: left; }
+        input[type=number] { width: 60px; height: 10px; text-indent: 1px; margin: 0 0 2px 0; background: var(--input-bg); color: var(--input-color); padding: 4px; font-size: 12px; border: solid 1px #343c49; border-radius: 2px; text-align: left; }
         input[type=number]:hover { color: steelblue; border: solid 1px #43495a; }
-        input[type=text] { width: 90px; background: var(--input-bg); color: var(--input-color); padding: 3px; font-size: 11px; text-indent: 1px; border: solid 1px #343c49; border-radius: 2px; text-align: left; }
+        input[type=text] { width: 100px; background: var(--input-bg); color: var(--input-color); padding: 3px; font-size: 12px; text-indent: 1px; border: solid 1px #343c49; border-radius: 2px; text-align: left; }
         input[type=text]:hover { color: steelblue; border: solid 1px #43495a; cursor: text; }
         input[type=range] { accent-color: steelblue; width: 100%; height: 2px; margin: 0 0 8px 0; }
         input[type=range]::-webkit-slider-thumb { transform: scale(0.7); }
@@ -98,37 +98,37 @@
         button:hover { background: orange; color: #222; cursor: pointer; }
         button:disabled { background: var(--btn-bg); opacity: 0.5; pointer-events: none; }
         label { color: var(--label); margin: 0; font-size: 11px; }
-        select { width: 100%; background: var(--btn-bg); color: var(--btn-color); font-size: 11px; padding: 4px 0 4px 0; border: solid 1px #161a2080; border-radius: 3px; outline: none; text-align: center; vertical-align: middle; }
+        select { width: 100%; background: var(--btn-bg); color: var(--btn-color); font-size: 12px; padding: 4px 0 4px 0; border: solid 1px #161a2080; border-radius: 3px; outline: none; text-align: center; vertical-align: middle; }
         select:hover { color: steelblue; cursor: pointer; }
         option { color: silver; background: var(--btn-bg); }
         #canvas_render { z-index: 0; position: absolute; width: 100%; height: 100%; background: linear-gradient(0deg, #333946 0%, #545c70 100%); }
         #canvas_palette { z-index: 1; position: relative; width: 100%; height: 64000px; }
-        .menu_R { z-index: 1000; background: #2a2f3a; position: absolute; top: 0; right: 0; padding: 0 6px 6px 6px; width: 100px; height: fit-content; transform: translate(200px, 0); transition: transform 0.15s ease; box-shadow: -1px 1px 3px #404b58AA; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
+        .menu_R { z-index: 1000; background: #2a2f3a; position: absolute; top: 0; right: 0; padding: 0 6px 6px 6px; width: 110px; height: fit-content; transform: translate(200px, 0); transition: transform 0.15s ease; box-shadow: -1px 1px 3px #404b58AA; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
         .menu_R li { background: none; text-align: left; border: none; padding: 0; cursor: default; }
         .menu_R li:hover { background: none; }
         .menu_R li div.flex { display: inline-flex; }
-        .menu_R li div.flex button { width: 50px; }
-        .menu_R button { width: 100%; font-size: 11px; padding: 6px 0 6px 0; border-radius: 2px; }
+        .menu_R li div.flex button { width: 55px; }
+        .menu_R button { width: 100%; font-size: 12px; padding: 6px 0 6px 0; border-radius: 2px; }
         .menu_R .category { color: var(--cat-color); background: var(--cat-bg); font-size: 10px; letter-spacing: 0.06em; text-align: center; margin: 3px 0 3px 0; padding: 2px 0 2px 0; border-radius: 0; }
         .menu_R .category:hover { color: var(--cat-color); background: var(--cat-bg); cursor: default; }
         .menu_R :first-child { cursor: pointer; }
-        .menu_R :first-child span { color: var(--btn-color); letter-spacing: 0.08em; font-size: 9px; vertical-align: -4px; }
+        .menu_R :first-child span { color: var(--btn-color); letter-spacing: 0.08em; font-size: 10px; vertical-align: -4px; }
         .menu_R li i:first-child { color: var(--cat-color); margin-top: 6px; }
         .menu_R li:hover i:first-child { color: orange; }
-        .menu_L { z-index: 1000; background: #2a2f3a; position: absolute; top: 0; left: 0; padding: 0 6px 6px 6px; width: 100px; height: fit-content; transform: translate(-200px, 0); transition: transform 0.15s ease; box-shadow: 1px 1px 3px #404b58AA; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
+        .menu_L { z-index: 1000; background: #2a2f3a; position: absolute; top: 0; left: 0; padding: 0 6px 6px 6px; width: 110px; height: fit-content; transform: translate(-200px, 0); transition: transform 0.15s ease; box-shadow: 1px 1px 3px #404b58AA; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
         .menu_L li { background: none; text-align: left; border: none; padding: 0; cursor: default; }
         .menu_L li:hover { background: none; }
         .menu_L li div.flex { display: inline-flex; }
-        .menu_L li div.flex button { width: 50px; }
-        .menu_L button { width: 100%; font-size: 11px; padding: 6px 0 6px 0; border-radius: 2px; }
+        .menu_L li div.flex button { width: 55px; }
+        .menu_L button { width: 100%; font-size: 12px; padding: 6px 0 6px 0; border-radius: 2px; }
         .menu_L .category { color: var(--cat-color); background: var(--cat-bg); font-size: 10px; letter-spacing: 0.06em; text-align: center; margin: 3px 0 3px 0; padding: 2px 0 2px 0; border-radius: 0; }
         .menu_L .category:hover { color: var(--cat-color); background: var(--cat-bg); cursor: default; }
         .menu_L :first-child { cursor: pointer; }
-        .menu_L :first-child span { color: var(--btn-color); letter-spacing: 0.08em; font-size: 9px; vertical-align: -4px; }
+        .menu_L :first-child span { color: var(--btn-color); letter-spacing: 0.08em; font-size: 10px; vertical-align: -4px; }
         .menu_L li i:first-child { color: var(--cat-color); margin-top: 6px; transform: rotate(180deg); }
         .menu_L li:hover i:first-child { color: orange; }
         #toolbar_C { z-index: 500; width: 200px; left: 50%; margin-left: -100px; top: 1px; text-align: center; }
-        #toolbar_C li { display: inline-block; color: var(--btn-color); width: 65px; letter-spacing: 0.06em; font-size: 10px; padding: 7px 0 7px 0; margin: 0 -2px 0 -2px; box-shadow: inset 1px 1px 1px #37414e, inset -1px -1px 1px #2f3742; border-radius: 0; cursor: pointer; }
+        #toolbar_C li { display: inline-block; color: var(--btn-color); width: 65px; letter-spacing: 0.06em; font-size: 11px; padding: 6px 0 6px 0; margin: 0 -2px 0 -2px; box-shadow: inset 1px 1px 1px #37414e, inset -1px -1px 1px #2f3742; border-radius: 0; cursor: pointer; }
         #toolbar_C li:hover { color: black; }
         #toolbar_C li:nth-child(1) { border-top-left-radius: 3px; border-bottom-left-radius: 3px; }
         #toolbar_C li:nth-child(3) { border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
@@ -140,13 +140,13 @@
         #toolbar_C_mem :nth-child(2) { font-weight: normal; border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
         #toolbar_C_mem :nth-child(3) { margin-left: 4px; font-weight: normal; border-top-left-radius: 3px; border-bottom-left-radius: 3px; }
         #toolbar_C_mem :nth-child(4) { font-weight: normal; border-right: 1px solid #161a2096; border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
-        #toolbar_R { z-index: 500; width: 60px; position: absolute; right: 0; top: 0; }
+        #toolbar_R { z-index: 500; width: 65px; position: absolute; right: 0; top: 0; }
         #toolbar_R li { display: unset; background: none; border: none; padding: 0; }
-        #toolbar_R button { width: 100%; font-size: 9px; padding: 7px 5px 7px 5px; border-radius: 0; }
-        #toolbar_L { z-index: 500; width: 60px; position: absolute; left: 0; top: 0; }
+        #toolbar_R button { width: 100%; font-size: 10px; padding: 7px 5px 7px 5px; border-radius: 0; }
+        #toolbar_L { z-index: 500; width: 65px; position: absolute; left: 0; top: 0; }
         #toolbar_L li { display: inline; background: none; border: none; padding: 0; }
         #toolbar_L li:nth-child(1) button { padding-top: 4px; padding-bottom: 4px; }
-        #toolbar_L button { width: 100%; font-size: 9px; padding: 7px 5px 7px 5px; border-radius: 0; }
+        #toolbar_L button { width: 100%; font-size: 10px; padding: 7px 5px 7px 5px; border-radius: 0; }
         #toolbar_L li:first-child :first-child { width: 50%; float: left; }
         #toolbar_L li:first-child :last-child { width: 50%; }
         #hover { z-index: 600; top: 25%; left: 30%; position: absolute; background: none; }
@@ -160,7 +160,7 @@
         #hover li:nth-child(7) { position: absolute; top: -27px; left: -27px; }
         #hover li:nth-child(8) { position: absolute; top: -27px; left: 27px; }
         #hover li:nth-child(9) { position: absolute; top: 30px;  left: 0%; }
-        #palette { z-index: 500; width: 41px; background: #31394b30; position: absolute; left: 3px; top: 135px; bottom: 135px; overflow-y: scroll; overflow-x: hidden; }
+        #palette { z-index: 500; width: 41px; background: #31394b30; position: absolute; left: 3px; top: 140px; bottom: 135px; overflow-y: scroll; overflow-x: hidden; }
         #colorpicker0 { z-index: 500; position: absolute; width: 28px; left: 6px; bottom: 98px; }
         #colorpicker1 { z-index: 500; position: absolute; width: 28px; left: 6px; bottom: 98px; }
         #marquee { z-index: 500; display: none; background: #00ffff20; border: dotted 2px aqua; position: absolute; }
@@ -168,9 +168,9 @@
         #menu-about .about h1 { font-size: 12px; font-weight: normal; color: #98a1ac; letter-spacing: 1px; cursor: help; }
         #menu-texture li.img { display: inline-block; }
         #menu-texture li :hover { border-color: orange; }
-        #menu-texture img { object-fit: fill; border: solid 1px #6b798d; width: 24px; height: 24px; margin: 0 5px 4px 2px; cursor: pointer; }
-        #menu-storage img { object-fit: fill; border: dotted 1px #3c3f47; width: 95px; height: 60px; margin-left: 1px; cursor: pointer; }
-        #menu-storage li div button { font-size: 10px; }
+        #menu-texture img { object-fit: fill; border: solid 1px #6b798d; width: 30px; height: 30px; margin: -2px 3px 3px 1px; cursor: pointer; }
+        #menu-storage img { object-fit: fill; border: dotted 1px #3c3f47; width: 105px; height: 60px; margin-left: 1px; cursor: pointer; }
+        #menu-storage li div button { font-size: 10px; width: 55px; }
         #btn-symm-axis { color: orange; font-size: 12px; font-weight: bold; }
         #btn-symm-axis:hover { background: var(--input-bg); }
         #btn-helper-symmetry { z-index: 500; display: unset; font-size: 18px; font-weight: bold; text-shadow: 1px 1px 0 #14171b; width: 20px; padding: 5px; position: absolute; right: 3px; bottom: 90px; text-align: center; cursor: pointer; }
@@ -202,7 +202,7 @@
         #loadingscreen .logo { transform-style: preserve-3d; animation: bouncing 2s infinite; width: 30px; height: 30px; position: absolute; left: 50%; top: 50%; margin-left: -15px; margin-top: -30px; }
         #intro { z-index: 6000; display: none; opacity: 0; color: #97a5b8; font-size: 10px; line-height: 1.5em; letter-spacing: 0.1em; transition: opacity 0.5s; position: absolute; width: 200px; left: 50%; margin-left: -100px; bottom: 100px; text-transform: uppercase; text-align: center; }
         #intro button { font-size: 10px; font-weight: bold; width: 130px; margin-bottom: 5px; }
-        .dropzone { width: 88px; padding: 5px; background: #22263090; color: #586474; border: dotted 1px #14171b; border-radius: 3px; font-size: 10px; text-align: center; }
+        .dropzone { width: 98px; padding: 5px; background: #22263090; color: #586474; border: dotted 1px #14171b; border-radius: 3px; font-size: 10px; text-align: center; }
         .dropzone:hover { background: #222630; color: #586474; }
         .spacer { height: 3px; }
         .material-icons { font-family: 'Material Icons'; font-weight: normal; font-style: normal; font-size: 16px; vertical-align: middle; text-align: center; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; pointer-events: none; font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; -webkit-font-smoothing: antialiased; }
@@ -389,8 +389,8 @@
         <li class="category">ADD BAKE</li>
         <li><button onclick="bakery.newBake()">New Bake</button></li>
         <li><button onclick="tool.toolSelector('bakecolor')" class="tool_bakecolor">Bake Color</button></li>
-        <li class="category">BATCH BAKE</li>
-        <li><button onclick="bakery.bakeAllColors()">Bake All Colors</button></li>
+        <li class="category">GROUP BAKE</li>
+        <li><button onclick="bakery.bakeAllColors()">Bake<br>Color Groups</button></li>
         <li class="category">CLEAR</li>
         <li><button onclick="bakery.clearBakes(true)">Clear Bakes</button></li>
         <li class="category">OPTIONS<li>
@@ -473,7 +473,7 @@
         </li>
         <li class="category">IMPORT</li>
         <li><button onclick="document.getElementById('openfile_tex').click()">Add Texture</button></li>
-        <li class="spacer"></li>
+        <li class="spacer" style="height:8px"></li>
         <li id="texturepresets"></li>
         <li ondrop="material.deleteTexture(event)" ondragover="event.preventDefault()"><div class="dropzone"> drop here to delete</div></li>
         <li class="category">REPLICATE</li>
@@ -507,12 +507,12 @@
     </ul>
     <ul class="menu_L" id="menu-groups">
         <li onclick="ui.toggleMenuGroups()"><i class="material-icons">exit_to_app</i> <span>COLOR GROUPS</span></li>
-        <li class="category">ISOLATE</li>
+        <li class="category">HIDE/ISOLATE</li>
         <li><button onclick="tool.toolSelector('isolatecolor')" class="tool_isolatecolor">Isolate Color</button></li>
-        <li><button onclick="builder.setVoxelsVisibilityAndUpdate(true)">Unisolate</button>
-        <li class="category">HIDE</li>
+        <li class="spacer"></li>
         <li><button onclick="tool.toolSelector('hidecolor')" class="tool_hidecolor">Hide Color</button></li>
         <li><button onclick="tool.toolSelector('boxhide')" class="tool_boxhide">Box Hide</button></li>
+        <li class="category">RESTORE</li>
         <li><button onclick="builder.setVoxelsVisibilityAndUpdate(true)">Unhide All</button>
         <li class="category">DELETE</li>
         <li><button onclick="builder.deleteHidden()">Delete Hidden</button>
@@ -524,8 +524,7 @@
         <li><input type="checkbox" id="input-prefs-nohover" onclick="preferences.setNoHover(this.checked)"> <label for="input-prefs-nohover">No Hover Menu</label></li>
         <li><input type="checkbox" id="input-prefs-fullscreen" onclick="toggleFullscreen()"> <label for="input-prefs-fullscreen">Fullscreen</label></li>
         <li class="category">SCRIPTS</li>
-        <li><button onclick="forceDownload('https://raw.githubusercontent.com/nimadez/voxel-builder/main/scripts/blender-importer.py')">Blender Importer</button></li>
-        <li><button onclick="forceDownload('https://raw.githubusercontent.com/nimadez/voxel-builder/main/scripts/voxel-builder.py')">Desktop Installer</button></li>
+        <li><button onclick="window.open('https://github.com/nimadez/voxel-builder/tree/main/scripts', '_blank').focus();">GitHub Repo</button></li>
         <li class="category">PERFORMANCE</li>
         <li><button onclick="clearCache()">Clear Cache</button></li>
     </ul>
@@ -727,6 +726,8 @@ scene.registerAfterRender(() => {
             sceneAxisView.activeCamera.beta = azimuth.theta;
         }
     }
+    if (scene.activeCamera.mode == BABYLON.Camera.ORTHOGRAPHIC_CAMERA)
+        camera.setOrthoZoom();
     ui.updateStatus();
 });
 
@@ -998,8 +999,6 @@ function Camera() {
                 animator(this.camera2, 'target', this.camera2.target.clone(), this.camera0.target, 10,10);
             }
         }
-        if (scene.activeCamera.mode == BABYLON.Camera.ORTHOGRAPHIC_CAMERA)
-            this.setOrthoZoom();
     }
 
     this.setFramingBehavior = function(cam, target, scale) {
@@ -1065,7 +1064,6 @@ function Camera() {
             case 'ortho':
                 scene.activeCamera.mode = BABYLON.Camera.ORTHOGRAPHIC_CAMERA;
                 ui.domOrthoBtn.innerHTML = 'Orthographic';
-                this.setOrthoZoom();
                 break;
             case 'persp':
                 scene.activeCamera.mode = BABYLON.Camera.PERSPECTIVE_CAMERA;
@@ -1074,7 +1072,6 @@ function Camera() {
         }
 
         if (position) {
-            this.setOrthoZoom();
             scene.activeCamera.position = position.multiplyByFloats(
                 scene.activeCamera.radius, scene.activeCamera.radius, scene.activeCamera.radius).add(zoomTarget);
             scene.activeCamera.target = zoomTarget;
@@ -1100,8 +1097,6 @@ function Camera() {
             ui.domReticle.children[2].style.marginLeft = 49-(fov * 100)/2 + 'px';
             ui.domReticle.children[2].style.marginTop  = 49-(fov * 100)/2 + 'px';
         }
-        if (scene.activeCamera.mode == BABYLON.Camera.ORTHOGRAPHIC_CAMERA)
-            this.setOrthoZoom();
     }
 
     this.speedUp = function() {
@@ -1891,7 +1886,7 @@ function Builder(scene) {
 
 function Palette() {
     const W = 30;
-    const H = 20;
+    const H = 25;
     let ctx = null;
     this.uniqueColors = [];
 
@@ -1980,6 +1975,7 @@ function Helper(scene, sceneAxisView) {
     this.overlayPlane = BABYLON.MeshBuilder.CreatePlane("overlayplane", { sideOrientation: BABYLON.Mesh.DOUBLESIDE, updatable: false }, scene);
     this.overlayCube = BABYLON.MeshBuilder.CreateBox("overlaycube", { size: 1, sideOrientation: BABYLON.Mesh.FRONTSIDE, updatable: false }, scene);
     this.ghostBox = BABYLON.MeshBuilder.CreateBox("ghostbox", { size: 1, sideOrientation: BABYLON.Mesh.FRONTSIDE, updatable: false }, scene);
+    this.ghostBoxSymm = BABYLON.MeshBuilder.CreateBox("ghostboxsymm", { size: 1, sideOrientation: BABYLON.Mesh.FRONTSIDE, updatable: false }, scene);
     this.ghostVoxel = null;
     this.workplaneAxis = BABYLON.Axis.Y;
 
@@ -2055,7 +2051,19 @@ function Helper(scene, sceneAxisView) {
         this.ghostBox.enableEdgesRendering();
         this.ghostBox.convertToUnIndexedMesh();
         this.ghostBox.freezeNormals();
-        this.clearGhostVoxels(); // init
+
+        this.ghostBoxSymm.isVisible = false;
+        this.ghostBoxSymm.isPickable = false;
+        this.ghostBoxSymm.visibility = 0.1;
+        this.ghostBoxSymm.renderOverlay = true;
+        this.ghostBoxSymm.overlayColor = BABYLON.Color3.FromHexString(COL_ORANGE);
+        this.ghostBoxSymm.overlayAlpha = 0.5;
+        this.ghostBoxSymm.edgesWidth = 0; // overrided
+        this.ghostBoxSymm.edgesColor = BABYLON.Color4.FromHexString(COL_ORANGE + 'FF');
+        this.ghostBoxSymm.doNotSerialize = true;
+        this.ghostBoxSymm.enableEdgesRendering();
+        this.ghostBoxSymm.convertToUnIndexedMesh();
+        this.ghostBoxSymm.freezeNormals();
 
         this.workPlane.position.y = -0.5;
         this.workPlane.bakeCurrentTransformIntoVertices();
@@ -2071,6 +2079,8 @@ function Helper(scene, sceneAxisView) {
         this.workPlane.convertToUnIndexedMesh();
         this.workPlane.freezeNormals();
         this.setWorkPlane(this.workplaneAxis); // initial
+
+        this.clearGhostVoxels(); // init
     }
 
     this.setGrid = function() {
@@ -2117,7 +2127,6 @@ function Helper(scene, sceneAxisView) {
         this.symmPivot.isVisible = (symmetry.axis !== '');
         if (ui.domSymmCenter.checked) { // world
             this.symmPivot.position = BABYLON.Vector3.Zero();
-            this.symmPivot.position.y -= 0.5;
         } else { // local
             this.symmPivot.position = builder.SPS.mesh.getBoundingInfo().boundingSphere.centerWorld;
         }
@@ -2171,10 +2180,21 @@ function Helper(scene, sceneAxisView) {
         this.ghostBox.edgesWidth = scene.activeCamera.radius/5;
     }
 
+    this.drawGhostBoxSymmetry = function(pos, scale, hex) {
+        this.ghostBoxSymm.isVisible = true;
+        this.ghostBoxSymm.position = pos;
+        this.ghostBoxSymm.scaling = scale;
+        this.ghostBoxSymm.overlayColor = BABYLON.Color3.FromHexString(hex);
+        this.ghostBoxSymm.edgesWidth = scene.activeCamera.radius/5;
+    }
+
     this.clearGhostBox = function() {
         this.ghostBox.isVisible = false;
         this.ghostBox.position = BABYLON.Vector3.Zero();
         this.ghostBox.scaling = BABYLON.Vector3.Zero();
+        this.ghostBoxSymm.isVisible = false;
+        this.ghostBoxSymm.position = BABYLON.Vector3.Zero();
+        this.ghostBoxSymm.scaling = BABYLON.Vector3.Zero();
     }
 
     this.cloneGhostVoxel = function(pos, hex = '#C58A1B') {
@@ -2349,6 +2369,13 @@ function Tool(scene) {
             startPos.add(endPos).divide(new BABYLON.Vector3(2, 2, 2)),
             new BABYLON.Vector3(1 + eX - sX, 1 + eY - sY, 1 + eZ - sZ),
             hex);
+        
+        if (symmetry.axis !== '') {
+            helper.drawGhostBoxSymmetry(
+                symmetry.invertPos(startPos).add(symmetry.invertPos(endPos)).divide(new BABYLON.Vector3(2, 2, 2)),
+                new BABYLON.Vector3(1 + eX - sX, 1 + eY - sY, 1 + eZ - sZ),
+                hex);
+        }
 
         this.selected = [];
         for (let x = sX; x <= eX; x++) {
@@ -4421,8 +4448,8 @@ function UserInterface(scene) {
     this.domLoadingScreen = document.getElementById('loadingscreen');
     const styleMenuR = 'translate(200px, 0)';
     const styleMenuL = 'translate(-200px, 0)';
-    const styleMenuR_open = 'translate(-61px, 0)';
-    const styleMenuL_open = 'translate(61px, 0)';
+    const styleMenuR_open = 'translate(-66px, 0)';
+    const styleMenuL_open = 'translate(66px, 0)';
     let notificationTimer = null;
     let xOffset = 0, yOffset = 0; // hover
 
@@ -5233,6 +5260,7 @@ function Preferences() {
 
     this.setNoIntro = function(isEnabled) {
         localStorage.setItem('vbp_nointro', isEnabled);
+        if (isEnabled) ui.domIntro.style.display = 'none';
     }
 
     this.setNoHover = function(isEnabled) {
@@ -5261,16 +5289,9 @@ scene.onPointerObservable.add((pInfo) => {
             if (MODE == 1) toolBakery.onToolUp();
             break;
         case BABYLON.PointerEventTypes.POINTERWHEEL:
-            if (scene.activeCamera.mode == BABYLON.Camera.ORTHOGRAPHIC_CAMERA)
-                camera.setOrthoZoom();
             break;
     }
 });
-
-canvas.addEventListener("touchmove", (ev) => {
-    if (ev.touches.length > 1 && scene.activeCamera.mode == BABYLON.Camera.ORTHOGRAPHIC_CAMERA)
-        camera.setOrthoZoom();
-}, false);
 
 canvas.addEventListener("keyup", (ev) => {
     //console.log(ev.key);
@@ -5422,8 +5443,6 @@ document.getElementById('openfile_hdr').addEventListener("change", (ev) => {
 window.addEventListener("resize", (ev) => { 
     engine.resize(true);
     updateAxisViewViewport();
-    if (scene.activeCamera.mode == BABYLON.Camera.ORTHOGRAPHIC_CAMERA)
-        camera.setOrthoZoom();
     palette.create();
 }, false);
 
@@ -5577,14 +5596,6 @@ function downloadFile(txt, filename) {
     a.download = filename;
     a.click();
     URL.revokeObjectURL(url);
-}
-
-function forceDownload(href) {
-    const anchor = document.createElement('a');
-    anchor.href = href;
-    anchor.download = href;
-    document.body.appendChild(anchor);
-    anchor.click();
 }
 
 async function saveFile(txt, filename) { // to show a file dialog in Chrome
@@ -5969,12 +5980,13 @@ ui.domHelp.innerHTML = `
     <img width="100%" src="media/banner.jpg">
     <br><br><h1>Voxel-based 3D modeling application</h1>
     <br>
-    <br><b>MODEL</b> - Create, draw and paint voxel particles
-    <br><b>BAKERY</b> - Bake voxels into mesh, transform, replicate and setup materials/textures
+    <br><b>MODEL</b> - Create, draw and paint voxel particles and color groups
+    <br><b>BAKERY</b> - Bake voxels into mesh, transform, replicate and setup materials
     <br><b>RENDER</b> - Take screenshot, or export to GLB for more advanced use cases
     <br><i>&#8627; it is recommended to bake voxels before render or export</i>
     <br><i>&#8627; but you can sacrificing quality, to render or export unbaked</i>
     <br>
+    <br>* The number of voxels is unlimited, but 64K or 40x40x40 is a limit point
     <br>* Visit <a href="https://github.com/nimadez/voxel-builder/"><b>GitHub Repository</b></a> for more technical informations
     <br>
     <br><h1>GENERAL</h1>
@@ -6007,8 +6019,7 @@ ui.domHelp.innerHTML = `
     <br>- Create grid, plane, sphere, ellipsoid, random
     <br>- Create isometric room
     <br>- Create random terrain <i>(hit again to randomize)</i>
-    <br>- Generator resets voxels but does not clear baked meshes, you can bake multiple voxel objects</i>
-    <br>- Number of voxels limited to 64K or 64000 or 40x40x40 <i>(see repository for more info)</i>
+    <br>- Generator resets voxels but does not clear baked meshes, you can bake multiple meshes</i>
     <br><i>&#8627; it is not recommended to create a grid larger than 30x30x30 on mid-range PC</i>
     <br>
     <br><b>VOXELIZE: 3D voxelization</b>
@@ -6027,7 +6038,7 @@ ui.domHelp.innerHTML = `
     <br>- Higher "ratio" for more details <i>(higher ratio = more voxels)</i>
     <br>- Use a pixel editor software to draw 2D shapes for voxelization
     <br><i>&#8627; use lower "ratio" for better result</i>
-    <br>- Do not "bake all colors", you don't want a mesh per pixel color!
+    <br>- Do not "bake color groups", you don't want a mesh per pixel color!
     <br><br><img src="media/voxelization.jpg">
     <br><img src="media/pixelmonk.jpg">
     <br>
@@ -6085,15 +6096,15 @@ ui.domHelp.innerHTML = `
     <br>
     <br><b>GROUPS (color groups)</b>
     <br>- Isolate Color: isolate color group by picking a color
-    <br>- Box Hide: hide voxels by drawing a box
     <br>- Hide Color: hide color group by picking a color
-    <br>- Delete Hidden: delete all hidden voxels
+    <br>- Box Hide: hide voxels by drawing a box
     <br>- Unhide All: unhide all hidden voxels
+    <br>- Delete Hidden: delete all hidden voxels
     <br><i>&#8627; use visibility options to access underlying voxels</i>
     <br><i>&#8627; visibility is persistent, not break by drawing and painting</i>
     <br><i>&#8627; symmetry respect hidden voxels</i>
     <br><i>&#8627; bakery ignore hidden voxels (performance limit)</i>
-    <br><i>&#8627; hidden voxels store and restore on save/load and undo/redo</i>
+    <br><i>&#8627; hidden voxels store and restore on save/load or undo/redo</i>
     <br>
     <br><b>Color Palette</b>
     <br>- Each color is a group (layer/part) in "model" mode
@@ -6108,10 +6119,10 @@ ui.domHelp.innerHTML = `
     <br><b>BAKERY</b>
     <br>- New Bake: add new bake <i>(bake a part)</i>
     <br>- Bake Color: bake by picking a color group <i>(bake a part)</i>
-    <br>- Bake All Colors: clear and bake all voxels grouped by colors <i>(bake all parts)</i>
+    <br>- Bake Color Groups: clear and bake all voxels grouped by colors <i>(bake all parts)</i>
     <br>- Per-Face UVs: define texture coordinates, default 1:3 UVs, or per-face UVs
     <br><i>&#8627; unable to use the patterns and texture presets when checked</i>
-    <br>- The mesh is clean and ready for 3D printing, no holes and watertight
+    <br>- The mesh is clean and ready for 3D printing, watertight <i>(no holes)</i> 
     <br><br><img src="media/bakery_faces.jpg">
     <br>
     <br><b>BAKES</b>
@@ -6135,12 +6146,16 @@ ui.domHelp.innerHTML = `
     <br>
     <br><h1>RENDER</h1>
     <br>
+    <br>- Basic PBR rendering
+    <br>- Designed to preview model before export to GLB
     <br>- Drone camera view and controls
     <br>- Use HDR images to achieve realistic PBR rendering
     <br>- WASD controls on desktop, joystick controls on touchscreen
     <br>- Take pixel perfect screenshot to PNG <i>(render x3 larger, x2 on mobile)</i>
     <br><i>&#8627; voxels render slower than bakes, voxels not support PBR material</i>
     <br><br><img src="media/render.jpg">
+    <br>Using AI for image processing: <i>(not included in the package)</i>
+    <br><img src="media/render_ai.jpg">
     <br>
     <br><h1>Hover Toolbox</h1>
     <br>- Free Camera: disable drawing, make camera navigation easier and faster

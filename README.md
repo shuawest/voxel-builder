@@ -1,10 +1,11 @@
 # Voxel Builder
 
-![banner](media/banner.jpg?raw=true "banner")
+<a href="https://nimadez.github.io/voxel-builder"><img src="media/screenshot.jpg?raw=true"></img></a>
 
 ### **Voxel-based 3D modeling application**
 
-Version **4.0.1 RC 2023** *(Babylon.js 6.0.0)*
+Version 4.0.1 RC 2023<br>
+Babylon.js 6.7.0
 
 [ [Try now](https://nimadez.github.io/voxel-builder) ] [ [ Download ](https://github.com/nimadez/voxel-builder#desktop-installation) ] [ [Changelog](https://github.com/nimadez/voxel-builder/blob/main/CHANGELOG) ]
 
@@ -43,7 +44,7 @@ Version **4.0.1 RC 2023** *(Babylon.js 6.0.0)*
 
 ⚡ More
 - Built-in documentation
-- Clean handcrafted intelligent user-interface
+- Clean handcrafted user-interface
 - Single HTML file, minimum dependency
 - Ad-free, no miners and trackers, no logging
 
@@ -55,13 +56,18 @@ Version **4.0.1 RC 2023** *(Babylon.js 6.0.0)*
 <br><sub>* *PWA A2HS-ready (add to home screen)*</sub>
 
 ## Desktop Installation
-✅ [Download and run](https://github.com/nimadez/voxel-builder/blob/main/scripts/voxel-builder.py) portable Python installer, even on USB!
-```
-curl -o voxel-builder.py https://raw.githubusercontent.com/nimadez/voxel-builder/main/scripts/voxel-builder.py
-```
-** Voxel Builder runs offline on desktop (except for the Extras and HDRI samples), remember to run Python script regularly to get the latest update.
 
-[ Manual Installation ]<br>
+#### [ Automatic Installation ]
+✅ [Download and run Python installer script](https://github.com/nimadez/voxel-builder/blob/main/scripts/voxel-builder-installer.py)
+```
+curl -o voxel-builder-installer.py https://raw.githubusercontent.com/nimadez/voxel-builder/main/scripts/voxel-builder-installer.py
+```
+- You can run this script with any Python 3 version
+- Voxel Builder runs offline on desktop (except Extras and HDRI samples)
+- Run the installer script again to update the voxel-builder to the latest version
+- The package is portable and does not change system files
+
+#### [ Manual Installation ]
 1- [Download and install Electron](https://github.com/electron/electron/releases)<br>
 2- Add Electron path to environment variables<br>
 3- Clone repository to local storage *(or [Download ZIP](https://github.com/nimadez/voxel-builder/archive/refs/heads/main.zip))*<br>
@@ -71,19 +77,27 @@ curl -o voxel-builder.py https://raw.githubusercontent.com/nimadez/voxel-builder
 > cd voxel-builder
 > electron .
 ```
-To switch from Offline to Online, edit "main.js" file:
+To switch from offline to online, edit "main.js" file:
 ```
 loadFile('index.html') ==> loadURL('https://nimadez.github.io/voxel-builder')
+```
+To change startup project, overwrite "startup.vbx" file:
+```
+/voxel-builder/samples/startup.vbx
 ```
 
 ## Known Issues
 ```
 ■ Max. 64K voxels (64000 or 40x40x40)
-Each voxel is a particle, we used particles to build the world.
-You may go up to 256K but you can't interact with voxels:
+You can go up to 256K but you can't interact with the voxels:
 - Picking issue (GPU)
 - SPS rebuild delay (CPU)
 - Limited browser memory (unable to save/load/undo/redo)
+
+Of course, the number of voxels is unlimited, there are
+no restrictions, so you can use this program in the future
+with more powerful computers.
+
 Workaround: bake to mesh, 64K voxels per bake!
 
 ■ GLB failed to import multiple meshes for voxelization
@@ -102,14 +116,17 @@ Yes, remain open-source and ad-free
 ■ Can I use it to create 3D assets for commercial purposes?
 Yes, you can use it however you want
 
-■ Is it a small business or startup?
-No, this is a fun project for learning purpose
-
 ■ How to merge vertices after export to GLB?
 1- Open exported GLB file in Blender
 2- Go to "Modeling" tab and choose vertex selection mode
 3- Select all vertices (Ctrl + A)
 4- Mesh > Clean Up > Merge by Distance
+
+■ How to run Blender importer script?
+1- Save project to VBX file
+2- Open Blender and go to "Scripting" tab
+3- Click "Open" and select "blender-importer.py"
+4- Run the script and select a VBX file
 ```
 
 ## History

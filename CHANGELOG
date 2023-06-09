@@ -1,11 +1,15 @@
 All notable changes to this project will be documented in this file,
 UIX improvement and code management is not included in this file.
 
-[4.0.1] (in progress)
--
+[4.0.1]
+- NEW | update to babylon.js 6.7.0
+- NEW | symmetry is now visible on the opposite side for box tools
+- FIX | update installer script
+- FIX | orthographic zoom jumps
+- FIX | increase font size
 
 [4.0.0]
-- NEW | update to Babylon.js 6
+- NEW | update to Babylon.js 6.0.0
 - NEW | enter RC channel
 - NEW | PWA A2HS-ready
 - NEW | optional voxel or bake render
@@ -14,7 +18,7 @@ UIX improvement and code management is not included in this file.
 - NEW | symmetry pivot-center indicator
 - NEW | disable hover toolbox from preferences to use model/paint menu
 - NEW | optional startup project
-- NEW | optional height-gradient for  terrain generator
+- NEW | optional height-gradient for terrain generator
 - NEW | isolate voxels by color group
 - FIX | rework color groups + hide and seek (x3 faster)
 - FIX | memory records hide and seek
