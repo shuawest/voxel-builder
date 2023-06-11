@@ -1,6 +1,6 @@
 # Voxel Builder
 
-<a href="https://nimadez.github.io/voxel-builder"><img src="media/screenshot.jpg?raw=true"></img></a>
+<a href="https://nimadez.github.io/voxel-builder"><img src="https://repository-images.githubusercontent.com/565157149/f07c4c16-26b5-4d3b-aa6c-5061389d7aaf"></img></a>
 
 ### **Voxel-based 3D modeling application**
 
@@ -70,12 +70,12 @@ curl -o voxel-builder-installer.py https://raw.githubusercontent.com/nimadez/vox
 #### [ Manual Installation ]
 1- [Download and install Electron](https://github.com/electron/electron/releases)<br>
 2- Add Electron path to environment variables<br>
-3- Clone repository to local storage *(or [Download ZIP](https://github.com/nimadez/voxel-builder/archive/refs/heads/main.zip))*<br>
+3- Clone repository or [download ZIP](https://github.com/nimadez/voxel-builder/archive/refs/heads/main.zip)<br>
 4- Execute "run.bat" in Windows, or just enter the command:
 ```
-> git clone https://github.com/nimadez/voxel-builder.git
-> cd voxel-builder
-> electron .
+git clone https://github.com/nimadez/voxel-builder.git
+cd voxel-builder
+electron .
 ```
 To switch from offline to online, edit "main.js" file:
 ```
@@ -153,7 +153,6 @@ Code released under the [MIT license](https://github.com/nimadez/voxel-builder/b
 - [MagicaVoxel](https://ephtracy.github.io/)
 - [Electron](https://www.electronjs.org/)
 - [Google Material Icons](https://github.com/google/material-design-icons)
-- [Droid Sans Font](https://www.android.com/)
 - [Blender](https://blender.org/)
 - [KhronosGroup glTF-Sample-Models](https://github.com/KhronosGroup/glTF-Sample-Models)
 - [KhronosGroup glTF-Sample-Environments](https://github.com/KhronosGroup/glTF-Sample-Environments)

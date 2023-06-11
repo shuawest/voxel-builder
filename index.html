@@ -128,7 +128,7 @@
         .menu_L li i:first-child { color: var(--cat-color); margin-top: 6px; transform: rotate(180deg); }
         .menu_L li:hover i:first-child { color: orange; }
         #toolbar_C { z-index: 500; width: 200px; left: 50%; margin-left: -100px; top: 1px; text-align: center; }
-        #toolbar_C li { display: inline-block; color: var(--btn-color); width: 65px; letter-spacing: 0.06em; font-size: 11px; padding: 6px 0 6px 0; margin: 0 -2px 0 -2px; box-shadow: inset 1px 1px 1px #37414e, inset -1px -1px 1px #2f3742; border-radius: 0; cursor: pointer; }
+        #toolbar_C li { display: inline-block; color: var(--btn-color); width: 65px; letter-spacing: 0.06em; font-size: 10px; padding: 6px 0 6px 0; margin: 0 -2px 0 -2px; box-shadow: inset 1px 1px 1px #37414e, inset -1px -1px 1px #2f3742; border-radius: 0; cursor: pointer; }
         #toolbar_C li:hover { color: black; }
         #toolbar_C li:nth-child(1) { border-top-left-radius: 3px; border-bottom-left-radius: 3px; }
         #toolbar_C li:nth-child(3) { border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
@@ -322,12 +322,12 @@
         <li class="category">3D VOXELIZER</li>
         <li><button onclick="document.getElementById('openfile_objglb').click()">Upload Model</button></li>
         <li><button onclick="voxelizer.pasteModelUrl()">Paste URL</button></li>
-        <li><button onclick="voxelizer.pasteObjBase64()">Base64 OBJ</button></li>
+        <li><button onclick="voxelizer.pasteObjBase64()">Paste Base64</button></li>
         <li><label>Scale&nbsp;&nbsp;</label> <input type="number" id="input-voxelizer-scale" value="40" min="5" max="100"></li>
         <li><label>Dense</label> <input type="number" id="input-voxelizer-dense" value="20" min="1" max="200"></li>
         <li class="category">2D VOXELIZER</li>
         <li><button onclick="document.getElementById('openfile_img').click()">Upload Image</button></li>
-        <li><button onclick="voxelizer.pasteBase64Image()">Base64 Image</button></li>
+        <li><button onclick="voxelizer.pasteBase64Image()">Paste Base64</button></li>
         <li><label>Ratio&nbsp;&nbsp;</label> <input type="number" id="input-voxelizer-ratio" value="5.0" min="0.1" max="20" step="0.1"></li>
         <li><input type="checkbox" id="input-voxelizer-zup" checked> <label for="input-voxelizer-zup">Z-Up</label></li>
     </ul>
@@ -1538,7 +1538,7 @@ function Material(scene) {
         this.update();
         const li = document.createElement("li");
         li.classList.add("img");
-        li.innerHTML = `<img src="${ data }">`;
+        li.innerHTML = `<img data-bind="${ idx }" src="${ data }">`;
         li.addEventListener("click", () => {
             for (const i of ui.domTexturePresets.children)  // unselect
                 i.firstChild.style.borderColor = '#6b798d'; // presets
@@ -1553,15 +1553,15 @@ function Material(scene) {
     this.deleteTexture = function(evt) {
         evt.preventDefault();
         let data = evt.dataTransfer.getData("text");
-        const imgs = document.querySelectorAll('#menu-texture img');
+        let imgs = document.querySelectorAll('#menu-texture img');
         for (let i = 0; i < imgs.length; i++) {
             if (imgs[i].src == data) {
-                imgs[i].src = '';
-                if (i > numDefTex)
-                    this.textures[i].dispose();
                 ui.domTexturePresets.removeChild(imgs[i].parentElement);
+                this.textures[ parseInt(imgs[i].dataset.bind) ].dispose();
+                // TODO: this.textures.splice(i, 1);
             }
         }
+        imgs = null;
         data = null;
         this.setPBRTexture();
         this.update();
@@ -5075,7 +5075,7 @@ function UserInterfaceAdvanced(scene) {
         workplane.isVisible = true;
         ui.domWorkplaneBtn.firstChild.style.color = COL_ORANGE;
 
-        this.workplaneGizmos[0].scaleRatio = 0.5;
+        this.workplaneGizmos[0].scaleRatio = 0.6;
         this.workplaneGizmos[0].snapDistance = 0.5;
         this.workplaneGizmos[0].attachedMesh = workplane;
         this.workplaneGizmos[0].updateGizmoRotationToMatchAttachedMesh = false;
@@ -5090,7 +5090,7 @@ function UserInterfaceAdvanced(scene) {
                 this.workplaneGizmos[i].gizmoLayer.shouldRender = true;
         });
         
-        this.workplaneGizmos[1].scaleRatio = 0.5;
+        this.workplaneGizmos[1].scaleRatio = 0.6;
         this.workplaneGizmos[1].snapDistance = 0.5;
         this.workplaneGizmos[1].attachedMesh = workplane;
         this.workplaneGizmos[1].updateGizmoRotationToMatchAttachedMesh = false;
@@ -5105,7 +5105,7 @@ function UserInterfaceAdvanced(scene) {
                 this.workplaneGizmos[i].gizmoLayer.shouldRender = true;
         });
 
-        this.workplaneGizmos[2].scaleRatio = 0.5;
+        this.workplaneGizmos[2].scaleRatio = 0.6;
         this.workplaneGizmos[2].snapDistance = 0.5;
         this.workplaneGizmos[2].attachedMesh = workplane;
         this.workplaneGizmos[2].updateGizmoRotationToMatchAttachedMesh = false;
@@ -5120,7 +5120,7 @@ function UserInterfaceAdvanced(scene) {
                 this.workplaneGizmos[i].gizmoLayer.shouldRender = true;
         });
 
-        this.workplaneGizmos[3].scaleRatio = -0.25;
+        this.workplaneGizmos[3].scaleRatio = -0.3;
         this.workplaneGizmos[3].attachedMesh = workplane;
         this.workplaneGizmos[3].updateGizmoRotationToMatchAttachedMesh = false;
         this.workplaneGizmos[3].dragBehavior.onDragStartObservable.add(() => {
@@ -5131,7 +5131,7 @@ function UserInterfaceAdvanced(scene) {
             this.workplaneGizmos[3].dragBehavior._enabled = true;
         });
 
-        this.workplaneGizmos[4].scaleRatio = -0.25;
+        this.workplaneGizmos[4].scaleRatio = -0.3;
         this.workplaneGizmos[4].attachedMesh = workplane;
         this.workplaneGizmos[4].updateGizmoRotationToMatchAttachedMesh = false;
         this.workplaneGizmos[4].dragBehavior.onDragStartObservable.add(() => {
@@ -5142,7 +5142,7 @@ function UserInterfaceAdvanced(scene) {
             this.workplaneGizmos[4].dragBehavior._enabled = true;
         });
 
-        this.workplaneGizmos[5].scaleRatio = -0.25;
+        this.workplaneGizmos[5].scaleRatio = -0.3;
         this.workplaneGizmos[5].attachedMesh = workplane;
         this.workplaneGizmos[5].updateGizmoRotationToMatchAttachedMesh = false;
         this.workplaneGizmos[5].dragBehavior.onDragStartObservable.add(() => {

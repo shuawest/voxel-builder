@@ -22,7 +22,6 @@ VBUILDER = 'https://github.com/nimadez/voxel-builder/archive/refs/heads/main.zip
 run_bat = """@echo off
 title Voxel Builder
 start "" electron\electron .
-pause
 """
 
 import os
